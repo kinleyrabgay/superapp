@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superbt/core/res/colours.dart';
+import 'package:superbt/core/utils/constants/colors.dart';
 import 'package:superbt/core/utils/constants.dart';
 import 'package:superbt/src/profile/presentation/widgets/footer.dart';
 import 'package:superbt/src/profile/presentation/widgets/profile_item.dart';
@@ -21,11 +21,11 @@ class ProfileWithoutLogin extends StatelessWidget {
                 children: [
                   Container(
                     height: topContainerHeight * .50,
-                    color: AppColours.dummyBGColor,
+                    color: SAColors.dummyBGColor,
                   ),
                   Container(
                     height: topContainerHeight * .50,
-                    color: AppColours.whiteColor,
+                    color: SAColors.whiteColor,
                   ),
                 ],
               ),
@@ -40,7 +40,7 @@ class ProfileWithoutLogin extends StatelessWidget {
                       padding: const EdgeInsets.all(25.0),
                       child: Image.asset(
                         'assets/images/profile.png',
-                        color: AppColours.textColor1,
+                        color: SAColors.textColor1,
                       ),
                     ),
                   ),
@@ -83,7 +83,7 @@ class ProfileWithoutLogin extends StatelessWidget {
         ),
         const SizedBox(height: 15),
         Container(
-          color: AppColours.whiteColor,
+          color: SAColors.whiteColor,
           child: Column(
             children: [
               for (var item in items)
@@ -98,7 +98,7 @@ class ProfileWithoutLogin extends StatelessWidget {
         ),
         const SizedBox(height: 15),
         Container(
-          color: AppColours.whiteColor,
+          color: SAColors.whiteColor,
           child: Column(
             children: [
               for (var item in backup)

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superbt/core/res/colours.dart';
+import 'package:superbt/core/utils/constants/colors.dart';
 import 'package:superbt/src/profile/presentation/view/profile_without_login.dart';
 
 class ProfileView extends StatelessWidget {
@@ -8,9 +8,9 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColours.scaffoldBGColor,
+      backgroundColor: SAColors.scaffoldBGColor,
       appBar: AppBar(
-        backgroundColor: AppColours.whiteColor,
+        backgroundColor: SAColors.whiteColor,
         title: Text(
           'Profile',
           style: Theme.of(context).textTheme.titleLarge,

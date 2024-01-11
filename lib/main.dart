@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:superbt/core/res/colours.dart';
+import 'package:superbt/core/utils/constants/colors.dart';
 import 'package:superbt/src/home/presentation/view/home.dart';
 
 void main() {
@@ -26,14 +26,14 @@ class MyApp extends StatelessWidget {
           titleLarge: TextStyle(
             fontSize: 14.5,
             letterSpacing: 0.5,
-            color: AppColours.textColor1,
+            color: SAColors.textColor1,
           ),
           bodyLarge: TextStyle(
-            color: AppColours.textColor2,
+            color: SAColors.textColor2,
             fontSize: 14,
           ),
           bodySmall: TextStyle(
-            color: AppColours.textColor1,
+            color: SAColors.textColor1,
             fontSize: 11,
           ),
         ),

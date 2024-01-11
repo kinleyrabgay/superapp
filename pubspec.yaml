@@ -38,6 +38,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/vectors/
+    - assets/fonts/
+    - assets/lottie/
+    - assets/icons/
   fonts:
     - family: Mulish
       fonts:

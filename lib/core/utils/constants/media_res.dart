@@ -50,6 +50,8 @@ class MediaRes {
   static const courseInfoMaterial = '$_baseIcon/course_info_material.png';
   static const courseInfoVideo = '$_baseIcon/course_info_video.png';
 
+  static const heart = '$_baseIcon/heart.png';
+
   /// Subjects
   static const physicsIcon = '$_baseIcon/atom.png';
   static const scienceIcon = '$_baseIcon/microscope.png';

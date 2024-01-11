@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-class AppColours {
-  const AppColours._();
+class SAColors {
+  const SAColors._();
 
   /// #EDF8FF #FDC1E8, #FDFAE1, #FFFFFF
   static const gradient = [
@@ -17,7 +17,30 @@ class AppColours {
   static Color textColor1 = const Color(0xFF7b828c);
   static Color textColor2 = const Color(0xFF575969);
   static Color captionColor = const Color(0xFFbcbabf);
-  static Color scaffoldBGColor = const Color(0xFFf3f3f3);
+  static Color scaffoldBGColor = const Color(0xFF333333);
+
+  static Color darkGrayColor = const Color(0xFF535565);
+
+  static const Color black = Color(0xFF000000);
+
+  // AppBasic
+  static const Color primary = Color(0xFF4b68ff);
+  static const Color secondary = Color(0xFFFFE24B);
+  static const Color accent = Color(0xFFbDc7ff);
+
+  // Text
+  static const Color textPrimary = Color(0xFF333333);
+  static const Color textSecondary = Color(0xFF6c757D);
+  static const Color textWhite = Color(0xFFFFFFFF);
+
+  // Button
+  static const Color buttonPrimary = Color(0xFF4b68ff);
+  static const Color buttonSecondary = Color(0xFF6c7570);
+  static const Color buttonDisabled = Color(0xFFC4C4C4);
+
+  // Border
+  static const Color borderPrimary = Color(0xFFD9D9D9);
+  static const Color borderSecondary = Color(0xFFE6E6E6);
 
   /// #458CFF
   static const primaryColour = Color(0xFF458CFF);

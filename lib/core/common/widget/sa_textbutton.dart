@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superbt/core/res/colours.dart';
+import 'package:superbt/core/utils/constants/colors.dart';
 
 class SATextButton extends StatelessWidget {
   const SATextButton({super.key, required this.title, required this.routeName});
@@ -24,7 +24,7 @@ class SATextButton extends StatelessWidget {
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
-                color: AppColours.textColor1,
+                color: SAColors.textColor1,
               ),
             ),
           ),
