@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class SASizes {
   // Radius
   static const double xs = 4.0;
@@ -30,6 +32,7 @@ class SASizes {
   static const double imageThumbSize = 80.0;
 
   // Spacing
+  static const double primaryPadding = 12.0;
   static const double defaultSpace = 24.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSection = 32.0;

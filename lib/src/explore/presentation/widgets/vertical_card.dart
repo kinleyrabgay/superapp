@@ -17,7 +17,8 @@ class VerticalItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        width: 150,
+        // width: 150,
+        width: MediaQuery.of(context).size.width * 0.4,
         decoration: BoxDecoration(
           boxShadow: [SAShadowStyle.verticalItemShadow],
           borderRadius: BorderRadius.circular(SASizes.productImageRadius),
@@ -28,7 +29,8 @@ class VerticalItemCard extends StatelessWidget {
           children: [
             // Thumbnail, Whitlist Button & Discount Tag
             RoundedContainer(
-              height: 180,
+              // height : 150
+              height: MediaQuery.of(context).size.height * 0.15,
               padding: const EdgeInsets.all(SASizes.sm),
               radius: SASizes.cardRadiusLg,
               showBorder: false,
