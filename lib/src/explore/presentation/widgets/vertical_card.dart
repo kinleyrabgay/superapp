@@ -17,11 +17,9 @@ class VerticalItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        // width: 150,
-        width: MediaQuery.of(context).size.width * 0.4,
         decoration: BoxDecoration(
           boxShadow: [SAShadowStyle.verticalItemShadow],
-          borderRadius: BorderRadius.circular(SASizes.productImageRadius),
+          borderRadius: BorderRadius.circular(SASizes.productCardRadius),
           color: SAColors.whiteColor,
         ),
         child: Column(
@@ -29,8 +27,8 @@ class VerticalItemCard extends StatelessWidget {
           children: [
             // Thumbnail, Whitlist Button & Discount Tag
             RoundedContainer(
-              // height : 150
-              height: MediaQuery.of(context).size.height * 0.15,
+              height: 150,
+              // height: MediaQuery.of(context).size.height * 0.15,
               padding: const EdgeInsets.all(SASizes.sm),
               radius: SASizes.cardRadiusLg,
               showBorder: false,
@@ -41,20 +39,18 @@ class VerticalItemCard extends StatelessWidget {
                   // Image
                   SARoundedImage(
                     width: MediaQuery.of(context).size.width * 1.0,
-                    // height: 158,
-                    height: MediaQuery.of(context).size.height * 0.2,
-
+                    height: MediaQuery.of(context).size.height * 1.0,
                     imgUrl: productData['thumbnail'],
                     applyImageRadius: true,
                     backgroundColor: SAColors.whiteColor,
                     isNetworkImage: true,
                     boderRadius: SASizes.borderRadiusMd,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
 
                   if (productData['discountPercentage'] != null)
                     Positioned(
-                      top: 5,
+                      top: 0,
                       child: RoundedContainer(
                         radius: SASizes.sm,
                         showBorder: false,
@@ -65,10 +61,10 @@ class VerticalItemCard extends StatelessWidget {
                           vertical: SASizes.xs,
                         ),
                         child: Text(
-                          '${productData['discountPercentage']}%',
+                          '${productData['discountPercentage']}% ↓',
                           style: Theme.of(context)
                               .textTheme
-                              .labelLarge!
+                              .labelSmall!
                               .apply(color: SAColors.black),
                         ),
                       ),
@@ -81,6 +77,9 @@ class VerticalItemCard extends StatelessWidget {
                     child: SACircularIcon(
                       icon: CupertinoIcons.heart_fill,
                       color: Colors.red,
+                      size: 16,
+                      height: 24,
+                      witdh: 24,
                       backgroundColor: SAColors.darkGrayColor.withOpacity(0.1),
                     ),
                   ),
@@ -94,7 +93,7 @@ class VerticalItemCard extends StatelessWidget {
 
             // Details
             Padding(
-              padding: const EdgeInsets.only(left: SASizes.sm),
+              padding: const EdgeInsets.symmetric(horizontal: SASizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -123,6 +122,9 @@ class VerticalItemCard extends StatelessWidget {
                       )
                     ],
                   ),
+                  const SizedBox(
+                    height: SASizes.spaceBtwItems / 2,
+                  ),
                   // const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -134,24 +136,24 @@ class VerticalItemCard extends StatelessWidget {
                           maxLines: 1,
                           isLarge: false,
                           lineThrough: false),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: SAColors.darkGrayColor,
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(SASizes.cardRadiusMd),
-                            bottomRight:
-                                Radius.circular(SASizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: SASizes.iconLg * 1.2,
-                          height: SASizes.iconLg * 1.2,
-                          child: Icon(
-                            Icons.add,
-                            color: Colors.white,
-                          ),
-                        ),
-                      )
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //     color: SAColors.darkGrayColor,
+                      //     borderRadius: const BorderRadius.only(
+                      //       topLeft: Radius.circular(SASizes.cardRadiusMd),
+                      //       bottomRight:
+                      //           Radius.circular(SASizes.productImageRadius),
+                      //     ),
+                      //   ),
+                      //   child: const SizedBox(
+                      //     width: SASizes.iconLg * 1.2,
+                      //     height: SASizes.iconLg * 1.2,
+                      //     child: Icon(
+                      //       Icons.add,
+                      //       color: Colors.white,
+                      //     ),
+                      //   ),
+                      // )
                     ],
                   )
                 ],

@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class SASizes {
   // Radius
   static const double xs = 4.0;
@@ -50,6 +48,9 @@ class SASizes {
   static const double productImageRadius = 16.0;
   static const double productImageHeight = 160.0;
 
+  // Card
+  static const double productCardRadius = 8.0;
+
   // Card size
   static const double cardRadiusLg = 16.0;
   static const double cardRadiusMd = 12.0;
@@ -63,5 +64,5 @@ class SASizes {
   // Loading indicator size
   static const double loadingIndicatorSize = 36.0;
   // GRID
-  static const double gridViewSpacing = 16.0;
+  static const double gridViewSpacing = 12.0;
 }

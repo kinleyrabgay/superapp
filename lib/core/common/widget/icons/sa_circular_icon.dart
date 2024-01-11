@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:superbt/core/utils/constants/colors.dart';
 
@@ -25,15 +24,14 @@ class SACircularIcon extends StatelessWidget {
     return Container(
       width: witdh,
       height: height,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        // color: backgroundColor != null
-        //     ? backgroundColor
-        //     : SAColors.whiteColor.withOpacity(0.9),
         color: backgroundColor ?? SAColors.whiteColor.withOpacity(0.9),
       ),
       child: IconButton(
         onPressed: onPressed,
+        padding: EdgeInsets.zero,
         icon: Icon(
           icon,
           color: color,
