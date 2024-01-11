@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:superbt/core/res/colours.dart';
 import 'package:superbt/src/home/presentation/view/home.dart';
 
 void main() {
@@ -16,16 +17,30 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Super App',
       theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontSize: 14.5,
+            letterSpacing: 0.5,
+            color: AppColours.textColor1,
+          ),
+          bodyLarge: TextStyle(
+            color: AppColours.textColor2,
+            fontSize: 14,
+          ),
+          bodySmall: TextStyle(
+            color: AppColours.textColor1,
+            fontSize: 11,
+          ),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeView(),
+      home: const HomeView(),
     );
   }
 }

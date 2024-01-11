@@ -8,6 +8,8 @@ import 'package:superbt/src/profile/presentation/view/profile.dart';
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  static const routeName = '/home-view';
+
   @override
   State<HomeView> createState() => _HomeViewState();
 }
