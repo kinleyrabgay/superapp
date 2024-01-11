@@ -41,7 +41,9 @@ class VerticalItemCard extends StatelessWidget {
                   // Image
                   SARoundedImage(
                     width: MediaQuery.of(context).size.width * 1.0,
-                    height: 158,
+                    // height: 158,
+                    height: MediaQuery.of(context).size.height * 0.2,
+
                     imgUrl: productData['thumbnail'],
                     applyImageRadius: true,
                     backgroundColor: SAColors.whiteColor,
@@ -50,26 +52,27 @@ class VerticalItemCard extends StatelessWidget {
                     fit: BoxFit.contain,
                   ),
 
-                  Positioned(
-                    top: 3,
-                    child: RoundedContainer(
-                      radius: SASizes.sm,
-                      showBorder: false,
-                      borderColor: SAColors.borderPrimary,
-                      backgroundColor: SAColors.secondary.withOpacity(0.8),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: SASizes.sm,
-                        vertical: SASizes.xs,
-                      ),
-                      child: Text(
-                        '${productData['discountPercentage']}%',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .apply(color: SAColors.black),
+                  if (productData['discountPercentage'] != null)
+                    Positioned(
+                      top: 5,
+                      child: RoundedContainer(
+                        radius: SASizes.sm,
+                        showBorder: false,
+                        borderColor: SAColors.borderPrimary,
+                        backgroundColor: SAColors.secondary.withOpacity(0.8),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: SASizes.sm,
+                          vertical: SASizes.xs,
+                        ),
+                        child: Text(
+                          '${productData['discountPercentage']}%',
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .apply(color: SAColors.black),
+                        ),
                       ),
                     ),
-                  ),
 
                   // Favorite
                   Positioned(

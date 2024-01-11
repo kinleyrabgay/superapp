@@ -3,7 +3,7 @@ class Product {
   String title;
   String description;
   double price;
-  double discountPercentage;
+  double? discountPercentage;
   double rating;
   int stock;
   String brand;
@@ -16,7 +16,7 @@ class Product {
     required this.title,
     required this.description,
     required this.price,
-    required this.discountPercentage,
+    this.discountPercentage,
     required this.rating,
     required this.stock,
     required this.brand,
@@ -31,7 +31,7 @@ class Product {
       title: json['title'],
       description: json['description'],
       price: json['price'].toDouble(),
-      discountPercentage: json['discountPercentage'].toDouble(),
+      discountPercentage: json['discountPercentage']?.toDouble(),
       rating: json['rating'].toDouble(),
       stock: json['stock'],
       brand: json['brand'],
@@ -48,7 +48,6 @@ List<Map<String, dynamic>> productListData = [
     "title": "iPhone 9",
     "description": "An apple mobile which is nothing like apple",
     "price": 549,
-    "discountPercentage": 12.96,
     "rating": 4.69,
     "stock": 94,
     "brand": "Apple",
