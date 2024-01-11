@@ -21,7 +21,7 @@ class ExploreView extends StatelessWidget {
             children: [
               SAGridLayout(
                 itemCount: productList.length,
-                mainAxisExtent: 272.5,
+                mainAxisExtent: MediaQuery.of(context).size.height * 0.24,
                 itemBuilder: (_, index) => VerticalItemCard(
                   productData: productListData[index],
                 ),
